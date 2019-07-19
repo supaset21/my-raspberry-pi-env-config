@@ -26,3 +26,37 @@ After do this run command
 sudo apt-get update
 sudo apt-get install code-oss
 ```
+
+# Install pyenv for raspberry pi
+
+[ตัวอย่าง](http://www.knight-of-pi.org/pyenv-for-python-version-management-on-raspbian-stretch/)
+
+run below command
+```
+sudo apt-get install bzip2 libbz2-dev libreadline6 libreadline6-dev libffi-dev libssl1.0-dev sqlite3 libsqlite3-dev -y
+git clone git://github.com/yyuu/pyenv.git .pyenv
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+. ~/.bashrc
+```
+
+pyenv install example
+```
+pyenv install 3.6.3
+```
+
+pyenv check version
+```
+pyenv versions
+```
+
+change global version
+```
+pyenv global 3.6.3
+```
+
+after change don't forgot refresh command
+```
+exec -l $SHELL
+```
